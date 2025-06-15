@@ -2,158 +2,177 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emocionómetro</title>
   <style>
     body {
+      background: #1a1a1a;
+      color: #f5f5f5;
       font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 0;
+      padding: 2rem;
       text-align: center;
     }
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 2rem;
-    }
+
     h1 {
-      margin: 0;
       font-size: 2.5rem;
+      color: #ffca28;
     }
-    p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+
+    .intro, .ruta, .emociones {
+      max-width: 800px;
+      margin: 2rem auto;
     }
-    .container {
-      padding: 2rem;
-    }
-    .intro {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    .button-start {
-      background-color: #f39c12;
-      color: white;
+
+    .ruta button {
+      margin: 1rem;
       padding: 1rem 2rem;
+      background-color: #ffca28;
       border: none;
+      border-radius: 8px;
       font-size: 1rem;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 1rem 0;
+      color: #000;
+      cursor: pointer;
     }
-    .grid {
+
+    .emociones {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-    }
-    .card h2 {
-      margin-top: 0;
-    }
-    .card p {
-      font-size: 0.95rem;
-    }
-    .card-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      color: white;
-      border-radius: 5px;
-      font-size: 0.9rem;
-    }
-    .test-btn {
-      background-color: #4caf50;
-    }
-    .tips-btn {
-      background-color: #e67e22;
-    }
-    footer {
       margin-top: 3rem;
+    }
+
+    .emocion {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .emocion:hover {
+      transform: scale(1.03);
+    }
+
+    .emocion img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .emocion h2 {
+      color: #ffeb3b;
+      margin-top: 0.5rem;
+    }
+
+    .emocion p {
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0.5rem;
+    }
+
+    .emocion a {
+      background: #ffca28;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .personaje {
+      margin-top: 2rem;
+      max-width: 150px;
+    }
+
+    .bocadillo {
+      background: #333;
+      color: #fff9c4;
       padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
+      margin: 1rem auto;
+      border-radius: 12px;
+      font-style: italic;
+      max-width: 600px;
+      box-shadow: 0 0 10px #00000044;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: #888;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🌈 Emocionómetro</h1>
-    <p>Explora tus emociones, comprende su nivel y recibe estrategias</p>
-  </header>
 
-  <div class="container">
-    <div class="intro">
-      <p>Si no sabes exactamente qué emoción estás sintiendo, puedes comenzar identificándola con este test:</p>
-      <a class="button-start" href="https://lcob-100.github.io/EMOCION-BASE/" target="_blank">🔍 Identificar emoción base</a>
-      <p>Si ya sabes qué emoción estás sintiendo, selecciónala a continuación para conocer su intensidad y recibir ideas para gestionarla.</p>
+  <h1>Bienvenido al Emocionómetro</h1>
+
+  <div class="intro">
+    <p>¿No estás seguro de lo que sientes? ¿O sí sabes, pero quieres saber qué tan intensa es esa emoción?</p>
+    <p>Este espacio es para ti. Aquí podrás identificar tu emoción actual y entender mejor en qué nivel estás, con apoyo y consejos para cada situación.</p>
+  </div>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/3202/3202926.png" alt="Mascota emocional" class="personaje">
+
+  <div class="bocadillo">
+    🧠 ¡Hola! Soy tu guía emocional.<br>
+    Elige cómo quieres comenzar.<br>
+    <strong>Después de hacer el test, espera unos segundos.</strong> La página te llevará automáticamente a los consejos según tu nivel.
+  </div>
+
+  <div class="ruta">
+    <h2>¿Por dónde quieres empezar?</h2>
+    <button onclick="window.location.href='https://lcob-100.github.io/EMOCION-BASE/'">No sé qué emoción siento</button>
+    <button onclick="document.getElementById('seccion-emociones').scrollIntoView({ behavior: 'smooth' });">Ya sé qué emoción siento</button>
+  </div>
+
+  <div class="emociones" id="seccion-emociones">
+
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="Alegría">
+      <h2>Alegría</h2>
+      <p>Sentirse animado, conectado, en paz o con gratitud.</p>
+      <a href="https://lcob-100.github.io/ALEGRIA/">Hacer el test</a>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Alegría 😊</h2>
-        <p>Estado emocional de bienestar, gozo o gratitud ante experiencias positivas.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/ALEGRIA/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Ira 😠</h2>
-        <p>Reacción emocional ante lo que consideras injusto o amenazante.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/IRA/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Tristeza 😢</h2>
-        <p>Emoción relacionada con la pérdida, la nostalgia o la desconexión.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/TRISTEZA/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Miedo 😨</h2>
-        <p>Emoción que surge ante la percepción de peligro, incertidumbre o amenaza.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/MIEDO/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Sorpresa 😮</h2>
-        <p>Respuesta breve e intensa ante un evento inesperado.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/SORPRESA/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Asco 🤢</h2>
-        <p>Rechazo físico o moral hacia algo que resulta desagradable o intolerable.</p>
-        <div class="card-buttons">
-          <a href="https://lcob-100.github.io/ASCO/" class="test-btn" target="_blank">Hacer test</a>
-          <a href="#" class="tips-btn">Ver consejos</a>
-        </div>
-      </div>
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/753/753345.png" alt="Ira">
+      <h2>Ira</h2>
+      <p>Molestia o frustración que va desde incomodidad hasta furia.</p>
+      <a href="https://lcob-100.github.io/IRA/">Hacer el test</a>
     </div>
+
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="Tristeza">
+      <h2>Tristeza</h2>
+      <p>Nostalgia, pérdida o vacío. Desde leve hasta muy profunda.</p>
+      <a href="https://lcob-100.github.io/TRISTEZA/">Hacer el test</a>
+    </div>
+
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/528/528101.png" alt="Miedo">
+      <h2>Miedo</h2>
+      <p>Inseguridad, ansiedad o pánico ante algo real o imaginado.</p>
+      <a href="https://lcob-100.github.io/MIEDO/">Hacer el test</a>
+    </div>
+
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Asco">
+      <h2>Asco</h2>
+      <p>Rechazo físico o moral, desde leve hasta profundo.</p>
+      <a href="https://lcob-100.github.io/ASCO/">Hacer el test</a>
+    </div>
+
+    <div class="emocion">
+      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011141.png" alt="Sorpresa">
+      <h2>Sorpresa</h2>
+      <p>Desde desconcierto leve hasta shock o bloqueo.</p>
+      <a href="https://lcob-100.github.io/SORPRESA/">Hacer el test</a>
+    </div>
+
   </div>
 
   <footer>
-    Emocionómetro creado por Lcob-100 · Todos los derechos reservados
+    Proyecto Emocionómetro · Hecho con ❤️ por Lcob-100
   </footer>
+
 </body>
 </html>
