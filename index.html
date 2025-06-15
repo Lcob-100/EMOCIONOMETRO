@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emocionómetro</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .intro {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .button-start {
+      background-color: #f39c12;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    .card-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+    .test-btn {
+      background-color: #4caf50;
+    }
+    .tips-btn {
+      background-color: #e67e22;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌈 Emocionómetro</h1>
+    <p>Explora tus emociones, comprende su nivel y recibe estrategias</p>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <p>Si no sabes exactamente qué emoción estás sintiendo, puedes comenzar identificándola con este test:</p>
+      <a class="button-start" href="https://lcob-100.github.io/EMOCION-BASE/" target="_blank">🔍 Identificar emoción base</a>
+      <p>Si ya sabes qué emoción estás sintiendo, selecciónala a continuación para conocer su intensidad y recibir ideas para gestionarla.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Alegría 😊</h2>
+        <p>Estado emocional de bienestar, gozo o gratitud ante experiencias positivas.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/ALEGRIA/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Ira 😠</h2>
+        <p>Reacción emocional ante lo que consideras injusto o amenazante.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/IRA/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Tristeza 😢</h2>
+        <p>Emoción relacionada con la pérdida, la nostalgia o la desconexión.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/TRISTEZA/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Miedo 😨</h2>
+        <p>Emoción que surge ante la percepción de peligro, incertidumbre o amenaza.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/MIEDO/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Sorpresa 😮</h2>
+        <p>Respuesta breve e intensa ante un evento inesperado.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/SORPRESA/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Asco 🤢</h2>
+        <p>Rechazo físico o moral hacia algo que resulta desagradable o intolerable.</p>
+        <div class="card-buttons">
+          <a href="https://lcob-100.github.io/ASCO/" class="test-btn" target="_blank">Hacer test</a>
+          <a href="#" class="tips-btn">Ver consejos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Emocionómetro creado por Lcob-100 · Todos los derechos reservados
+  </footer>
+</body>
+</html>
